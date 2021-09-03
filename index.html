@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVRL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .main {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 100px;
+            margin: 0 100px
+        }
+
+        .buttons #start, .buttons #stop {
+            width: 50px;
+            background-color:
+                #007376;
+                color: #fff;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .circle-1 {
+            background: transparent;
+            z-index: 4;
+        }
+
+        .cir11 {
+            background-color: #ff4c20
+        }
+
+        .cir22 {
+            background-color: #ffec50;
+        }
+
+        .cir33 {
+            background-color: #26acf6;
+        }
+
+        .cir44 {
+            background-color: green;
+        }
+
+
+        .cir11,
+        .cir22,
+        .cir33,
+        .cir44 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        }
+
+        .circle-1 .cir-1 {
+            animation: circle1 10s infinite;
+        }
+
+        .circle-2 {
+            transform: rotate(90deg);
+            z-index: 3;
+        }
+
+        .circle-2 .cir-2 {
+            animation: circle2 10s infinite;
+        }
+
+        .circle-3 {
+            transform: rotate(180deg);
+            z-index: 2;
+        }
+
+        .circle-3 .cir-3 {
+            animation: circle3 10s infinite;
+        }
+
+        .circle-4 {
+            transform: rotate(270deg);
+            z-index: 1;
+        }
+
+        .circle-4 .cir-4 {
+            animation: circle4 10s infinite;
+        }
+
+        /* 1 */
+        @keyframes circle1 {
+            0% {
+                background-color: #ff4c20;
+            }
+
+            12.5% {
+                width: 200px;
+            }
+
+            25% {
+                background-color: #ffec50;
+                width: 40px;
+            }
+
+            37.5% {
+                width: 200px;
+            }
+
+            50% {
+                width: 40px;
+                background-color: #26acf6;
+            }
+
+            62.5% {
+                width: 200px;
+            }
+
+            75% {
+                width: 40px;
+                background-color: green;
+            }
+
+            87.5% {
+                width: 200px;
+            }
+
+            100% {
+                width: 40px;
+                background-color: #ff4c20;
+            }
+        }
+
+        /* 2 */
+        @keyframes circle2 {
+            0% {
+                background-color: #ffec50;
+            }
+
+            12.5% {
+                width: 200px;
+            }
+
+            25% {
+                background-color: #26acf6;
+
+                width: 40px;
+            }
+
+            37.5% {
+                width: 200px;
+            }
+
+            50% {
+                width: 40px;
+                background-color: green;
+            }
+
+            62.5% {
+                width: 200px;
+            }
+
+            75% {
+                width: 40px;
+                background-color: #ff4c20;
+            }
+
+            87.5% {
+                width: 200px;
+            }
+
+            100% {
+                width: 40px;
+                background-color: #ffec50;
+            }
+        }
+
+        /* 3 */
+        @keyframes circle3 {
+            0% {
+                background-color: #26acf6;
+            }
+
+            12.5% {
+                width: 200px;
+            }
+
+            25% {
+                background-color: green;
+
+                width: 40px;
+            }
+
+            37.5% {
+                width: 200px;
+            }
+
+            50% {
+                width: 40px;
+                background-color: #ff4c20;
+            }
+
+            62.5% {
+                width: 200px;
+            }
+
+            75% {
+                width: 40px;
+                background-color: #ffec50;
+            }
+
+            87.5% {
+                width: 200px;
+            }
+
+            100% {
+                width: 40px;
+                background-color: #26acf6;
+            }
+        }
+
+        /* 4 */
+        @keyframes circle4 {
+            0% {
+                background-color: green;
+            }
+
+            12.5% {
+                width: 200px;
+            }
+
+            25% {
+                background-color: #ff4c20;
+
+                width: 40px;
+            }
+
+            37.5% {
+                width: 200px;
+            }
+
+            50% {
+                width: 40px;
+                background-color: #ffec50;
+            }
+
+            62.5% {
+                width: 200px;
+            }
+
+            75% {
+                width: 40px;
+                background-color: #26acf6;
+            }
+
+            87.5% {
+                width: 200px;
+            }
+
+            100% {
+                width: 40px;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="box circle-1">
+                <div class="cir11 "></div>
+            </div>
+            <div class="box circle-2">
+                <div class="cir22 "></div>
+            </div>
+            <div class="box circle-3">
+                <div class="cir33 "></div>
+            </div>
+            <div class="box circle-4">
+                <div class="cir44 "></div>
+            </div>
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>let circle1 = document.querySelector(".cir11");
+        let circle2 = document.querySelector(".cir22");
+        let circle3 = document.querySelector(".cir33");
+        let circle4 = document.querySelector(".cir44");
+
+        let start = document.querySelector("#start");
+        start.addEventListener("click", () => {
+            circle1.classList.add("cir-1");
+            circle2.classList.add("cir-2");
+            circle3.classList.add("cir-3");
+            circle4.classList.add("cir-4");
+        });
+
+        let stop = document.querySelector("#stop");
+        stop.addEventListener("click", () => {
+            circle1.classList.remove("cir-1");
+            circle2.classList.remove("cir-2");
+            circle3.classList.remove("cir-3");
+            circle4.classList.remove("cir-4");
+        });
+    </script>
+</body>
+
+</html>
